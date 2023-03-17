@@ -1,4 +1,4 @@
-package com.ll.p1712;
+package com.ll.김창헌.수학.p1712;
 
 import java.util.Scanner;
 
