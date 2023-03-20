@@ -6,12 +6,14 @@ import java.io.InputStreamReader;
 import java.nio.Buffer;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
 public class p10828 {
-    private static List<Integer> stack = new ArrayList<>();
+    private static Stack<Integer> stack = new Stack<>();
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
 
         int N = Integer.parseInt(br.readLine());
         for(int i = 0; i < N; i++) {
@@ -22,15 +24,15 @@ public class p10828 {
 
     public static void checkCommand(String command) {
         if (command.startsWith("push")) {
-            stack.add(Integer.parseInt(command.substring(5)));
+            String[] tmp = command.split(" ");
+            stack.push(Integer.parseInt(tmp[1]));
         }
         if (command.equals("pop")) {
             if(stack.size() == 0) {
                 System.out.println(-1);
             } else {
-                int num = stack.get(stack.size() - 1);
+                int num = stack.pop();
                 System.out.println(num);
-                stack.remove(stack.size() - 1);
             }
         }
         if (command.equals("size")) {
@@ -47,7 +49,7 @@ public class p10828 {
             if(stack.size() == 0) {
                 System.out.println(-1);
             } else {
-                System.out.println(stack.get(stack.size() - 1));
+                System.out.println(stack.peek());
             }
         }
     }
