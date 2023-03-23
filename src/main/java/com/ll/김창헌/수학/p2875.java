@@ -1,4 +1,4 @@
-package com.ll.김창헌.수학.p2875;
+package com.ll.김창헌.수학;
 
 
 import java.util.Scanner;
