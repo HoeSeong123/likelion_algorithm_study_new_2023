@@ -1,7 +1,5 @@
 package com.ll.우혜지.재귀정렬.p10872;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Scanner;
 
 public class Main {
