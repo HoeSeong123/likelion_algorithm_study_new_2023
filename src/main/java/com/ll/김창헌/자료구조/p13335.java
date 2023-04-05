@@ -32,7 +32,7 @@ public class p13335 {
         int weight = 0;
 
         while (!bridge.isEmpty()) {
-            time ++;
+            time += 1;
             weight -= bridge.poll();
 
             if (!truck.isEmpty()) {
